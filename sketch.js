@@ -12,11 +12,11 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	ball1=new ball(660,300,40);
-	ball5=new ball(500,300,40);
-	ball3=new ball(580,300,40);
-	ball4=new ball(620,300,40);
-	ball2=new ball(540,300,40);
+	ball1=new ball(660,300,50);
+	ball5=new ball(500,300,50);
+	ball3=new ball(580,300,50);
+	ball4=new ball(620,300,50);
+	ball2=new ball(540,300,50);
 	wall1=new wall(580,50,200,20);
 	
 	rope1=new rope(ball5.body,wall1.body,-80,0)
@@ -31,10 +31,9 @@ function draw() {
   Engine.update(engine);
 
   wall1.show();
-  ball1.display();
   fill("blue")
+  ball1.display();
   ball2.display();
-  fill("white")
   ball3.display();
   ball4.display();
   ball5.display();
@@ -48,6 +47,6 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(ball5.body,ball5.body.position,{x:-50,y:-45});
+		Matter.Body.applyForce(ball5.body,ball5.body.position,{x:-70,y:-70});
 	}
 }                                                           
